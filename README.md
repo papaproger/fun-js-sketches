@@ -5,6 +5,7 @@
 - [\[\[Prototype\]\], \_\_proto\_\_, prototype](#1)
 - [setTimeout() & toString()](#2)
 - [call(), apply(), bind() #1](#3)
+- [call(), apply(), bind() #2](#4)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -135,6 +136,62 @@ a_modifier('number', 3)
 [003.js][003]<br>
 [go to Contents](#0)
 
+### <a id="4">call(), apply(), bind() #2</a>
+
+```javascript
+let person = {
+    study(subject) { console.log(`${this.name} is studying ${subject}`) },
+    fallInLoveWith(name) { console.log(`${this.name} is in love with ${name}`) },
+}
+
+let james = {
+    name: 'James',
+    __proto__: person,
+}
+
+let dog = {
+    eat(food) { console.log(`${this.name} is eating ${food}`) },
+    bark() { console.log(`${this.name} is barking`) },
+}
+
+let henry = {
+    name: 'Henry',
+    __proto__: dog,
+}
+
+console.log('#1:')
+
+james.study('javascript')
+henry.eat('some chicken')
+henry.bark()
+
+console.log('#2:')
+
+henry.eat.call(james, 'some salad')
+henry.bark.bind(james)()
+james.study.apply(henry, ['how to jump'])
+
+console.log('#3:')
+
+let henryLoves = james.fallInLoveWith.bind(henry)
+henryLoves('Emma')
+
+let henryLovesAnotherWoman = james.fallInLoveWith.bind(henry, 'Elizabeth')
+henryLovesAnotherWoman()
+
+console.log('#4:')
+
+function f() {
+    console.log([].pop.call(arguments))
+    console.log(arguments.length)
+}
+
+f(1, 2, 3, 4, 5)
+```
+
+[004.js][004]<br>
+[go to Contents](#0)
+
 ### by
 
 [PapaProger](https://github.com/papaproger)
@@ -142,3 +199,4 @@ a_modifier('number', 3)
 [001]: https://github.com/papaproger/fun-js-sketches/blob/main/001.js
 [002]: https://github.com/papaproger/fun-js-sketches/blob/main/002.js
 [003]: https://github.com/papaproger/fun-js-sketches/blob/main/003.js
+[004]: https://github.com/papaproger/fun-js-sketches/blob/main/004.js
