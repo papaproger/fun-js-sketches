@@ -4,6 +4,7 @@
 
 - [\[\[Prototype\]\], \_\_proto\_\_, prototype](#1)
 - [setTimeout() & toString()](#2)
+- [call(), apply(), bind() #1](#3)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -101,9 +102,43 @@ console.log("someLog('L5')")
 [002.js][002]<br>
 [go to Contents](#0)
 
+### <a id="3">call(), apply(), bind() #1</a>
+
+```javascript
+function modifier(key, value) {
+    console.log(this[key] += value)
+}
+
+let a = {
+    number: 10
+}
+
+modifier.call(a, 'number', 1)
+modifier.apply(a, ['number', 2])
+
+const a_modifier = modifier.bind(a)
+a_modifier('number', 3)
+
+a.number = 20
+
+modifier.call(a, 'number', 1)
+a_modifier('number', 3)
+
+a = {
+    number: 30
+}
+
+modifier.apply(a, ['number', 2])
+a_modifier('number', 3)
+```
+
+[003.js][003]<br>
+[go to Contents](#0)
+
 ### by
 
 [PapaProger](https://github.com/papaproger)
 
 [001]: https://github.com/papaproger/fun-js-sketches/blob/main/001.js
 [002]: https://github.com/papaproger/fun-js-sketches/blob/main/002.js
+[003]: https://github.com/papaproger/fun-js-sketches/blob/main/003.js
