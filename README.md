@@ -6,6 +6,7 @@
 - [setTimeout() & toString()](#2)
 - [call(), apply(), bind() #1](#3)
 - [call(), apply(), bind() #2](#4)
+- [valueOf(), toString(), \[Symbol.toPrimitive\]()](#5)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -69,7 +70,7 @@ console.log('#7:')
 console.log(bmw.turn())
 ```
 
-[001.js][001]<br>
+[open file][001]<br>
 [go to Contents](#0)
 
 ### <a id="2">setTimeout() & toString()</a>
@@ -100,7 +101,7 @@ setTimeout({
 console.log("someLog('L5')")
 ```
 
-[002.js][002]<br>
+[open file][002]<br>
 [go to Contents](#0)
 
 ### <a id="3">call(), apply(), bind() #1</a>
@@ -133,7 +134,7 @@ modifier.apply(a, ['number', 2])
 a_modifier('number', 3)
 ```
 
-[003.js][003]<br>
+[open file][003]<br>
 [go to Contents](#0)
 
 ### <a id="4">call(), apply(), bind() #2</a>
@@ -189,14 +190,128 @@ function f() {
 f(1, 2, 3, 4, 5)
 ```
 
-[004.js][004]<br>
+[open file][004]<br>
+[go to Contents](#0)
+
+### <a id="5">valueOf(), toString(), \[Symbol.toPrimitive\]()</a>
+
+```javascript
+const _1 = {
+    valueOf() {
+        return 777
+    },
+    toString() {
+        return '888'
+    },
+    [Symbol.toPrimitive]() {
+        return 999
+    },
+}
+
+console.log('#1:')
+
+console.log(_1)
+console.log(_1 + 1)
+console.log(_1 + '1')
+
+// - - - - - - - - - - //
+
+const _2 = {
+    valueOf: () => {
+        return 777
+    },
+    toString: () => {
+        return '888'
+    },
+    [Symbol.toPrimitive]: () => {
+        
+    },
+}
+
+console.log('#2:')
+
+console.log(_2 + 1)
+console.log(_2 + '1')
+
+// - - - - - - - - - - //
+
+const _3 = {
+    valueOf: () => {
+        return 777
+    },
+    toString: () => {
+        return '888'
+    },
+    [Symbol.toPrimitive]: null, // undefined,
+}
+
+console.log('#3:')
+
+console.log(_3 + 1)
+console.log(_3 + '1')
+
+// - - - - - - - - - - //
+
+const _4 = {
+    valueOf() {
+        return 777
+    },
+    toString() {
+        return "console.log('888')"
+    },
+}
+
+console.log('#4:')
+
+setTimeout(_4, 0)
+
+_4.toString = function () {
+    return "() => console.log(888 + 1)"
+}
+
+setTimeout(_4, 0)
+
+_4.toString = function () {
+    return () => console.log('888 + 2')
+}
+
+setTimeout(_4, 0)
+
+_4.toString = function () {
+    return "console.log(888 + 3); console.log(_4 + 4);"
+}
+
+setTimeout(_4, 0)
+
+// - - - - - - - - - - //
+
+const _5 = {
+    valueOf() {
+        return '777'
+    },
+}
+
+console.log('#5:')
+
+console.log(_5 + 1)
+
+_5.valueOf = null
+_5.toString = () => {
+    return 888
+},
+
+console.log(_5 + 1)
+```
+
+[open file][005]<br>
 [go to Contents](#0)
 
 ### by
 
 [PapaProger](https://github.com/papaproger)
 
-[001]: https://github.com/papaproger/fun-js-sketches/blob/main/001.js
-[002]: https://github.com/papaproger/fun-js-sketches/blob/main/002.js
-[003]: https://github.com/papaproger/fun-js-sketches/blob/main/003.js
-[004]: https://github.com/papaproger/fun-js-sketches/blob/main/004.js
+[001]: https://github.com/papaproger/fun-js-sketches/blob/main/js/001.js
+[002]: https://github.com/papaproger/fun-js-sketches/blob/main/js/002.js
+[003]: https://github.com/papaproger/fun-js-sketches/blob/main/js/003.js
+[004]: https://github.com/papaproger/fun-js-sketches/blob/main/js/004.js
+[005]: https://github.com/papaproger/fun-js-sketches/blob/main/js/005.js
