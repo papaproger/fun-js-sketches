@@ -70,8 +70,8 @@ console.log('#7:')
 console.log(bmw.turn())
 ```
 
-[open file][001]<br>
-[go to Contents](#0)
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/001.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### <a id="2">setTimeout() & toString()</a>
 
@@ -101,8 +101,8 @@ setTimeout({
 console.log("someLog('L5')")
 ```
 
-[open file][002]<br>
-[go to Contents](#0)
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/002.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### <a id="3">call(), apply(), bind() #1</a>
 
@@ -134,8 +134,8 @@ modifier.apply(a, ['number', 2])
 a_modifier('number', 3)
 ```
 
-[open file][003]<br>
-[go to Contents](#0)
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/003.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### <a id="4">call(), apply(), bind() #2</a>
 
@@ -190,8 +190,8 @@ function f() {
 f(1, 2, 3, 4, 5)
 ```
 
-[open file][004]<br>
-[go to Contents](#0)
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/004.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### <a id="5">valueOf(), toString(), \[Symbol.toPrimitive\]()</a>
 
@@ -303,15 +303,9 @@ _5.toString = () => {
 console.log(_5 + 1)
 ```
 
-[open file][005]<br>
-[go to Contents](#0)
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/005.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
 
 [PapaProger](https://github.com/papaproger)
-
-[001]: https://github.com/papaproger/fun-js-sketches/blob/main/js/001.js
-[002]: https://github.com/papaproger/fun-js-sketches/blob/main/js/002.js
-[003]: https://github.com/papaproger/fun-js-sketches/blob/main/js/003.js
-[004]: https://github.com/papaproger/fun-js-sketches/blob/main/js/004.js
-[005]: https://github.com/papaproger/fun-js-sketches/blob/main/js/005.js
