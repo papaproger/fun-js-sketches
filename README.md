@@ -7,6 +7,7 @@
 - [call(), apply(), bind() #1](#3)
 - [call(), apply(), bind() #2](#4)
 - [valueOf(), toString(), \[Symbol.toPrimitive\]()](#5)
+- [\_\_proto\_\_](#6)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -213,9 +214,9 @@ console.log('#1:')
 console.log(_1)
 console.log(_1 + 1)
 console.log(_1 + '1')
+```
 
-// - - - - - - - - - - //
-
+```javascript
 const _2 = {
     valueOf: () => {
         return 777
@@ -232,9 +233,9 @@ console.log('#2:')
 
 console.log(_2 + 1)
 console.log(_2 + '1')
+```
 
-// - - - - - - - - - - //
-
+```javascript
 const _3 = {
     valueOf: () => {
         return 777
@@ -249,9 +250,9 @@ console.log('#3:')
 
 console.log(_3 + 1)
 console.log(_3 + '1')
+```
 
-// - - - - - - - - - - //
-
+```javascript
 const _4 = {
     valueOf() {
         return 777
@@ -282,9 +283,9 @@ _4.toString = function () {
 }
 
 setTimeout(_4, 0)
+```
 
-// - - - - - - - - - - //
-
+```javascript
 const _5 = {
     valueOf() {
         return '777'
@@ -304,6 +305,85 @@ console.log(_5 + 1)
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/005.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
+
+### <a id="6">\_\_proto\_\_</a>
+
+```javascript
+// "use strict";
+
+let m = 1
+function objLog(markNumber) {
+    console.log(`#${markNumber}:`)
+    for (let prop in this) console.log(this[prop])
+}
+
+const a = {
+    prop_1_in_a: "a . prop #1",
+    prop_2_in_a: "a . prop #2",
+}
+
+const b = {
+    prop_1_in_b: "b . prop #1",
+    prop_2_in_b: "b . prop #2",
+}
+
+const c = {
+    prop_1_in_c: "c . prop #1",
+    prop_2_in_c: "c . prop #2",
+
+    __proto__: a,
+}
+
+objLog.call(c, m++)
+
+let d = {
+    ...c,
+}
+
+objLog.call(d, m++)
+
+d = {
+    ...c,
+
+    __proto__: c.__proto__,
+}
+
+objLog.call(d, m++)
+
+d = {
+    ...c,
+}
+
+d.__proto__ = a
+d["__proto__"] = b
+
+objLog.call(d, m++)
+
+d = {
+    ...c,
+}
+
+d.__proto__ = a
+Object.defineProperty(d, "__proto__", {
+    value: b,
+    enumerable: true,
+})
+
+objLog.call(d, m++)
+
+console.log(delete d.__proto__)
+console.log(delete d["__proto__"])
+
+d.__proto__ = {
+    prop_1: "unexpected prop #1",
+    prop_2: "unexpected prop #2",
+}
+
+objLog.call(d, m++)
+```
+
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/006.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
