@@ -9,6 +9,7 @@
 - [valueOf(), toString(), \[Symbol.toPrimitive\]()](#5)
 - [\_\_proto\_\_](#6)
 - [data types, typeof](#7)
+- [String(), Number(), Boolean()](#8)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -411,6 +412,17 @@ console.log(NaN ** 0)
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/007.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
+
+### <a id="8">String(), Number(), Boolean()</a>
+
+```javascript
+console.log(String((x, y) => { return x + y }))
+console.log(Number(value))
+console.log(Boolean("0"))
+```
+
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/008.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
