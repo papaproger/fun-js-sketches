@@ -8,6 +8,7 @@
 - [call(), apply(), bind() #2](#4)
 - [valueOf(), toString(), \[Symbol.toPrimitive\]()](#5)
 - [\_\_proto\_\_](#6)
+- [data types, typeof](#7)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -384,6 +385,32 @@ objLog.call(d, m++)
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/006.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
+
+### <a id="7">data types, typeof</a>
+
+```javascript
+let mark = 0
+function typeofLog(value) {
+    console.log(`#${++mark}: ${typeof(value)}`)
+}
+
+/*  1 */ typeofLog(Infinity) // -Infinity
+/*  2 */ typeofLog(NaN)
+/*  3 */ typeofLog(1)
+/*  4 */ typeofLog(1n)
+/*  5 */ typeofLog("")
+/*  6 */ typeofLog(true) // false
+/*  7 */ typeofLog(null)
+/*  8 */ typeofLog(undefined)
+/*  9 */ typeofLog({})
+/* 10 */ typeofLog(Symbol())
+/* 11 */ typeofLog(() => {})
+
+console.log(NaN ** 0)
+```
+
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/007.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
