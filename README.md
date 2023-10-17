@@ -420,6 +420,16 @@ console.log(NaN ** 0)
 console.log(String((x, y) => { return x + y }))
 console.log(Number(value))
 console.log(Boolean("0"))
+console.log(Boolean(""))
+console.log(Boolean({}))
+
+const obj = {
+    [Symbol.toPrimitive]() {
+        return false
+    }
+}
+
+console.log(obj && true)
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/008.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
