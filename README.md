@@ -11,6 +11,7 @@
 - [data types, typeof](#7)
 - [String(), Number(), Boolean()](#8)
 - [Numbers](#9)
+- [Logical operators](#10)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -507,6 +508,90 @@ BIN
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/009.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
+
+### <a id="10">Logical operators</a>
+
+```javascript
+console.log(`!; &&; ||, ??;
+
+||:
+    ${"" || "return me" || 1 }
+    ${false || null || 0}
+    ${"" || undefined || NaN}
+
+&&:
+    ${"no return" && "" && 0}
+    ${1 && true && 2}
+    ${[] && {} && 3}
+
+??:
+    ${null ?? 1}
+    ${undefined ?? 2}
+    ${NaN ?? 3}
+    ${4 ?? 5}
+    ${"6" ?? "7"}
+
+!!:
+    ${!!null}
+    ${!!8}
+`)
+
+1 || console.log("Hi! #1")
+0 || console.log("Hi! #2")
+
+1 && console.log("Hi! #3")
+0 && console.log("Hi! #4")
+
+console.log("Counters:")
+
+let counter = 1
+console.log(--counter || --counter || --counter)
+
+counter = 2
+console.log(--counter && --counter && --counter)
+
+let a = ""
+let b = "C"
+let c = "some string"
+
+console.log(`||=
+    ${a ||= "A"}
+    ${b ||= "B"}
+`)
+
+a = "C"
+b = ""
+
+console.log(`&&=
+    ${a &&= "A"}
+    ${b &&= "B"}
+`)
+
+a = null
+b = null
+
+console.log(`|| vs. ?? #1
+    ${a || b || c || "no string"}
+    ${a ?? b ?? c ?? "no string"}
+`)
+
+let scores = 0
+
+console.log(`|| vs. ?? #2
+    ${scores || 9}
+    ${scores ?? 9}
+`)
+
+scores = null
+scores ??= 10
+
+console.log(`|| vs. ?? #3
+    ${scores}
+`)
+```
+
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/010.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
