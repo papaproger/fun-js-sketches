@@ -12,6 +12,7 @@
 - [String(), Number(), Boolean()](#8)
 - [Numbers](#9)
 - [Logical operators](#10)
+- [Lexical Scope, LexicalEnvironment, Closure](#11)
 
 ### <a id="1">\[\[Prototype\]\], \_\_proto\_\_, prototype</a>
 
@@ -592,6 +593,67 @@ console.log(`|| vs. ?? #3
 ```
 
 <a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/010.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
+<a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
+
+### <a id="11">Lexical Scope, LexicalEnvironment, Closure</a>
+
+```javascript
+let sum_1 = x => y => x + y
+console.log(sum_1(1)(2))
+
+let a = 1
+let sum_a = sum_1(a)
+console.log(sum_a(2))
+
+a = 2
+console.log(sum_a(2))
+
+let sum_2 = () => y => a + y
+sum_a = sum_2()
+a = 5
+console.log(sum_a(5))
+
+let sum_3 = () => {
+    let a = 3
+    return y => a + y
+}
+sum_a = sum_3()
+console.log(sum_a(5))
+
+let sum_4 = () => {
+    let a = 3
+    let func = y => a + y
+    console.log(func(100))
+    a = 4
+    return func
+}
+sum_a = sum_4()
+console.log(sum_a(5))
+
+{
+    let str = 'hello'
+    setTimeout(() => console.log(`timer: ${str}`), 0)
+    Promise.resolve(str).then(result => console.log(`then: ${result}`))
+    str = 'bye'
+}
+
+{
+    let str = 'hello'
+    let func_1 = () => console.log(`timer: ${str}`)
+    setTimeout(func_1)
+    let func_2 = result => console.log(`then: ${result}`)
+    Promise.resolve(str).then(func_2)
+    str = 'bye'
+}
+
+let x = 7
+let f = () => x
+console.log(f())
+```
+
+Links: [closure](https://learn.javascript.ru/closure), [new Function](https://learn.javascript.ru/new-function)
+
+<a href="https://github.com/papaproger/fun-js-sketches/blob/main/js/011.js"><img src="https://img.shields.io/badge/open%20file%20&#9658;-242424?style=for-the-badge" alt="open file" /></a>
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20contents%20&#9650;-242424?style=for-the-badge" alt="go to Contents" /></a>
 
 ### by
