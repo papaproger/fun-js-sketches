@@ -13,6 +13,7 @@
 - [Numbers][090]
 - [Logical operators][100]
 - [Lexical Scope, LexicalEnvironment, Closure][110]
+- [console.log()][120]
 
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20top%20&#9650;-242424?style=for-the-badge" alt="go to top" /></a>
 
@@ -31,3 +32,4 @@
 [090]: https://github.com/papaproger/fun-js-sketches/blob/main/files/090.md
 [100]: https://github.com/papaproger/fun-js-sketches/blob/main/files/100.md
 [110]: https://github.com/papaproger/fun-js-sketches/blob/main/files/110.md
+[120]: https://github.com/papaproger/fun-js-sketches/blob/main/files/120.md
