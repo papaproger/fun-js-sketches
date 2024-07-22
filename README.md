@@ -14,6 +14,8 @@
 - [Logical operators][100]
 - [Lexical Scope, LexicalEnvironment, Closure][110]
 - [console.log()][120]
+- Functions:
+    - [Kinds of functions][130]
 
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20top%20&#9650;-242424?style=for-the-badge" alt="go to top" /></a>
 
@@ -33,3 +35,4 @@
 [100]: https://github.com/papaproger/fun-js-sketches/blob/main/files/100.md
 [110]: https://github.com/papaproger/fun-js-sketches/blob/main/files/110.md
 [120]: https://github.com/papaproger/fun-js-sketches/blob/main/files/120.md
+[130]: https://github.com/papaproger/fun-js-sketches/blob/main/files/130.md
