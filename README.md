@@ -17,6 +17,7 @@
 - Functions:
     - [Kinds of functions][130]
 - [Object methods #1][200]
+- [Symbols][220]
 
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20top%20&#9650;-242424?style=for-the-badge" alt="go to top" /></a>
 
@@ -38,3 +39,4 @@
 [120]: https://github.com/papaproger/fun-js-sketches/blob/main/files/120.md
 [130]: https://github.com/papaproger/fun-js-sketches/blob/main/files/130.md
 [200]: https://github.com/papaproger/fun-js-sketches/blob/main/files/200.md
+[220]: https://github.com/papaproger/fun-js-sketches/blob/main/files/220.md
