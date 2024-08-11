@@ -17,6 +17,7 @@
 - Functions:
     - [Kinds of functions][130]
     - [Function Declaration & Function Expression #1][140]
+    - [Function Declaration & Function Expression #2: this][150]
 - [Object methods #1][200]
 - [Symbols][220]
 
@@ -40,5 +41,6 @@
 [120]: https://github.com/papaproger/fun-js-sketches/blob/main/files/120.md
 [130]: https://github.com/papaproger/fun-js-sketches/blob/main/files/130.md
 [140]: https://github.com/papaproger/fun-js-sketches/blob/main/files/140.md
+[150]: https://github.com/papaproger/fun-js-sketches/blob/main/files/150.md
 [200]: https://github.com/papaproger/fun-js-sketches/blob/main/files/200.md
 [220]: https://github.com/papaproger/fun-js-sketches/blob/main/files/220.md
