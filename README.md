@@ -16,6 +16,7 @@
 - [console.log()][120]
 - Functions:
     - [Kinds of functions][130]
+    - [Function Declaration & Function Expression #1][140]
 - [Object methods #1][200]
 - [Symbols][220]
 
@@ -38,5 +39,6 @@
 [110]: https://github.com/papaproger/fun-js-sketches/blob/main/files/110.md
 [120]: https://github.com/papaproger/fun-js-sketches/blob/main/files/120.md
 [130]: https://github.com/papaproger/fun-js-sketches/blob/main/files/130.md
+[140]: https://github.com/papaproger/fun-js-sketches/blob/main/files/140.md
 [200]: https://github.com/papaproger/fun-js-sketches/blob/main/files/200.md
 [220]: https://github.com/papaproger/fun-js-sketches/blob/main/files/220.md
