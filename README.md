@@ -22,6 +22,7 @@
 - [Object methods #1][200]
 - [Symbols][220]
 - [var & let, const][230]
+- [exec(x, ...args)][240]
 
 <a href="#0"><img src="https://img.shields.io/badge/go%20to%20top%20&#9650;-242424?style=for-the-badge" alt="go to top" /></a>
 
@@ -48,3 +49,4 @@
 [200]: https://github.com/papaproger/fun-js-sketches/blob/main/files/200.md
 [220]: https://github.com/papaproger/fun-js-sketches/blob/main/files/220.md
 [230]: https://github.com/papaproger/fun-js-sketches/blob/main/files/230.md
+[240]: https://github.com/papaproger/fun-js-sketches/blob/main/files/240.md
