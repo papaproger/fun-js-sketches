@@ -19,6 +19,7 @@
     - [Function Declaration & Function Expression #1][140]
     - [Function Declaration & Function Expression #2: this][150]
     - [Function Declaration & Function Expression #3: this][160]
+    - [Function Declaration & Function Expression #4 feat. exec()][170]
 - [Object methods #1][200]
 - [Symbols][220]
 - [var & let, const][230]
@@ -46,6 +47,7 @@
 [140]: https://github.com/papaproger/fun-js-sketches/blob/main/files/140.md
 [150]: https://github.com/papaproger/fun-js-sketches/blob/main/files/150.md
 [160]: https://github.com/papaproger/fun-js-sketches/blob/main/files/160.md
+[170]: https://github.com/papaproger/fun-js-sketches/blob/main/files/170.md
 [200]: https://github.com/papaproger/fun-js-sketches/blob/main/files/200.md
 [220]: https://github.com/papaproger/fun-js-sketches/blob/main/files/220.md
 [230]: https://github.com/papaproger/fun-js-sketches/blob/main/files/230.md
